@@ -1,0 +1,10 @@
+header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .menuBtn img {
+    height: 30px;
+    cursor: pointer;
+}
