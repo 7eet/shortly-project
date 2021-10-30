@@ -9,6 +9,22 @@ img {
 }
 
 
+.btn-primary {
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #56d0cf;
+    color: $white;
+    font-weight: 700;
+    border: none;
+}
+
+::ng-deep .mat-form-field {
+    background-color: $white;
+    padding: 10px;
+    border-radius: 10px;
+}
+    
 .getStartedSection {
     background-image: url('../../../assets/images/bg-boost-mobile.svg');
     background-color: $darkviolet;
@@ -28,4 +44,7 @@ img {
     background-repeat: no-repeat;
     margin: 1rem;
     border-radius: 10px;
+    position: absolute;
+    margin-top: -72px;
+    width: 82%;
 }

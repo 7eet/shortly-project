@@ -4,6 +4,19 @@
     </div>
 
     <div class="menuBtn">
-        <img src="../../../assets/images/menu-outline.svg">
+        <a (click)="showMenu()">
+            <img src="../../../assets/images/menu-outline.svg">
+        </a>
+    </div>
+
+    <div class="menu" id="mobileHeader">
+            <ul>
+                <li>Features</li>
+                <li>Pricing</li>
+                <li>Resources</li>
+                <hr>
+                <li>Login</li>
+                <li><a class="btn btn-secondary">Sign Up</a></li>
+            </ul>
     </div>
 </header>

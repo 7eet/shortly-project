@@ -12,4 +12,9 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  showMenu() {
+    let mobileHeader = document.getElementById("mobileHeader");
+    mobileHeader?.classList.toggle("mobileViewHeader");
+  }
+
 }

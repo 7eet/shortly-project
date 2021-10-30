@@ -1,5 +1,5 @@
 
-<section class="marginTop-1 marginBottom-1">
+<section class="marginTop-1 marginBottom-7">
     <div class="container">
         <div class="">
             <div class="">
@@ -16,14 +16,20 @@
 
 
 <section class="formSection">
-    <form formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
-        <input type="text" formControlName="url" placeholder="Shorten a link here...">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+        <div class="marginBottom-1">
+            <mat-form-field >
+                <mat-label>Shorten a link here...</mat-label>
+                <input matInput formControlName="url">
+            </mat-form-field>
+        </div>
+
         <button class="btn btn-primary text-center">Shorten It!</button>
     </form>
 </section>
 
 <!-- feature section start -->
-<section class="marginTop-3 features">
+<section class="marginTop-3 paddingTop-12 features">
     <div class="text-center">
         <h2>Advanced Statistics</h2>
         <p class="marginTop-1">Track how your links are performing across the web with our advanced statistics dashboard.</p>
