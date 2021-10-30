@@ -5,46 +5,60 @@
             <div class="">
                 <img src="../../../assets/images/illustration-working.svg">
             </div>
-            <div class="">
+            <div class="text-center marginTop-2">
                 <h1>More than just shorter links</h1>
-                <p>Build your brand's recognition and get detailed insights on how your links are performing.</p>
-                <button class="btn btn-secondary">Get Started</button>
+                <p class="marginTop-1">Build your brand's recognition and get detailed insights on how your links are performing.</p>
+                <button class="btn btn-secondary marginTop-1">Get Started</button>
             </div>
         </div>
     </div>
 </section>
 
+
+<section class="formSection">
+    <form formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+        <input type="text" formControlName="url" placeholder="Shorten a link here...">
+        <button class="btn btn-primary text-center">Shorten It!</button>
+    </form>
+</section>
+
 <!-- feature section start -->
-<section class="marginTop-1 marginBottom-1 features">
-    <div class="">
-        <h1>Advanced Statistics</h1>
-        <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
+<section class="marginTop-3 features">
+    <div class="text-center">
+        <h2>Advanced Statistics</h2>
+        <p class="marginTop-1">Track how your links are performing across the web with our advanced statistics dashboard.</p>
     </div>
 
-    <div class="">
+    <div class="flexColumn alignCenter">
         <div class="card">
-            <img src="../../../assets/images/icon-brand-recognition.svg">
+            <div class="iconInsideCircle">
+                <img src="../../../assets/images/icon-brand-recognition.svg">
+            </div>
             <h3>Brand Recognition</h3>
-            <p>Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instill confidence in your content.</p>
+            <p class="marginTop-1">Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instill confidence in your content.</p>
         </div>
 
         <div class="card">
-            <img src="../../../assets/images/icon-detailed-records.svg">
+            <div class="iconInsideCircle">
+                <img src="../../../assets/images/icon-detailed-records.svg">
+            </div>
             <h3>Detailed Records</h3>
-            <p>Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</p>
+            <p class="marginTop-1">Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</p>
         </div>
 
         <div class="card">
-            <img src="../../../assets/images/icon-fully-customizable.svg">
+            <div class="iconInsideCircle">
+                <img src="../../../assets/images/icon-fully-customizable.svg">
+            </div>
             <h3>Fully Customizable</h3>
-            <p>Imporve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p>
+            <p class="marginTop-1">Imporve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p>
         </div>
 
     </div>
 </section>
 <!-- feature section end -->
 
-<section class="marginTop-1 getStartedSection">
-    <h1>Boost your links today</h1>
-    <button class="btn btn-secondary">Get Started</button>
+<section class="getStartedSection text-center">
+    <h2>Boost your links today</h2>
+    <button class="btn btn-secondary marginTop-1">Get Started</button>
 </section>

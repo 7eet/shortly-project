@@ -1,3 +1,31 @@
+@import "variables.scss";
+
 img {
     width: 100%;
+}
+
+.features {
+    background-color: #eeeeee;
+}
+
+
+.getStartedSection {
+    background-image: url('../../../assets/images/bg-boost-mobile.svg');
+    background-color: $darkviolet;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 3rem 2rem;
+    color: $white;
+}
+
+.formSection {
+    background-image: url("../../../assets/images/bg-boost-mobile.svg");
+    padding: 2rem 1rem;
+    background-color: $darkviolet;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 1rem;
+    border-radius: 10px;
 }
