@@ -30,6 +30,7 @@ export class HomeComponent implements OnInit {
       this.apiService.getShortenLink(url).subscribe((response)=>{ 
         if (response.ok) {
           this.arrayOfShortenUrls.unshift(response.body);
+          console.log(response.body);
         }
       }, (error) => {
         Swal.fire({

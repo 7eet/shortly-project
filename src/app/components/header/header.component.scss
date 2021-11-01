@@ -11,6 +11,16 @@ header .menuBtn img {
     cursor: pointer;
 }
 
+header ul li {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px 15px;
+}
+
+.rightSideNav, .leftSideNav {
+    display: none;
+}
+
 .mobileViewHeader {
     display: block;
     background-color: $darkviolet;
@@ -27,4 +37,33 @@ header .menuBtn img {
     color: $white;
     margin: 30px 0px;
     font-weight: 700;;
+}
+
+
+
+@media (min-width: 760px) {
+
+    header {
+        padding: 50px 20px;
+    }
+
+    header li a {
+        color: $grayishViolet;
+    }
+
+    header li a.btn {
+        color: $white;
+    }
+
+    .menuBtn , .menu {
+        display: none;
+    }
+
+    .rightSideNav, .leftSideNav {
+        display: block;
+    }
+
+    .row {
+        display: flex;
+    }
 }

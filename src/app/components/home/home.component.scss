@@ -107,3 +107,53 @@ img {
 .backgroundVoilet {
     background-color: $darkviolet;
 }
+
+
+@media (min-width: 760px) {
+
+    .heroSection {
+        padding: 30px 20px;
+    }
+
+    .heroSection  h1, p {
+       text-align: left; 
+    }
+
+    .row {
+        display: flex;
+    }
+
+    .order1 {
+        order: 1;
+    }
+
+    .order2 {
+        order: 2;
+    }
+
+    ::ng-deep .mat-form-field {
+        width: 90%;
+    }
+
+    .btn-primary {
+        padding: 14px;
+        text-align: center;
+    }
+
+    .originalLink {
+        border-bottom: none;
+    }
+
+    .btn-copy {
+        margin: 0px;
+    }
+
+    .formSection {
+        width: 91%;
+    }
+
+    .features {
+        padding-top: 4rem;
+    }
+
+}

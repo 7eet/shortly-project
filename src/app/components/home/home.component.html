@@ -1,11 +1,11 @@
 
-<section class="marginTop-1 marginBottom-7">
+<section class="marginTop-1 marginBottom-7 heroSection">
     <div class="container">
-        <div class="">
-            <div class="">
+        <div class="row">
+            <div class="order2">
                 <img src="../../../assets/images/illustration-working.svg">
             </div>
-            <div class="text-center marginTop-2">
+            <div class="text-center marginTop-2 order1">
                 <h1 class="darkBlue">More than just shorter links</h1>
                 <p class="marginTop-1">Build your brand's recognition and get detailed insights on how your links are performing.</p>
                 <button class="btn btn-secondary marginTop-1">Get Started</button>
@@ -17,16 +17,19 @@
 
 <section class="formSection">
     <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
-        <div class="marginBottom-1">
-            <mat-form-field  floatLabel="never" >
-                <input autocomplete="off" matInput formControlName="url" placeholder="Shorten a link here...">
-            </mat-form-field>
-            <div *ngIf="submitedForm && myForm.get('url')?.hasError('required')">
-                <i class="danger-text">{{ inputErrorMessage }}</i>
-              </div>
+        <div class="row">
+            <div class="marginBottom-1 col-md-8">
+                <mat-form-field  floatLabel="never" >
+                    <input autocomplete="off" matInput formControlName="url" placeholder="Shorten a link here...">
+                </mat-form-field>
+                <div *ngIf="submitedForm && myForm.get('url')?.hasError('required')">
+                    <i class="danger-text">{{ inputErrorMessage }}</i>
+                  </div>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-primary text-center">Shorten It!</button>
+            </div>
         </div>
-
-        <button class="btn btn-primary text-center">Shorten It!</button>
     </form>
 </section>
 
@@ -34,10 +37,14 @@
 <section class="marginTop-3 paddingTop-9 features">
     <div class="shortenCardsContainer">
         <div *ngFor="let link of arrayOfShortenUrls">
-            <div class="shortenCard">
-                <p class="originalLink">{{ link.result.original_link }}</p>
-                <p class="shortenLink">{{ link.result.full_short_link2 }}</p>
-                <button class="btn-copy {{ link.result.code }}" (click)="copyShortenLink(link.result)">Copy</button>
+            <div class="shortenCard row space-between alignCenter">
+                <div class="">
+                    <p class="originalLink">{{ link.result.original_link }}</p>
+                </div>
+                <div class="row alignCenter">
+                    <p class="shortenLink">{{ link.result.full_short_link2 }}</p>
+                    <button class="btn-copy {{ link.result.code }}" (click)="copyShortenLink(link.result)">Copy</button>
+                </div>
             </div>
         </div>
     </div>
