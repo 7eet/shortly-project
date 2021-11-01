@@ -70,3 +70,9 @@ header ul li {
         display: flex;
     }
 }
+
+@media (min-width: 1200px) {
+    header {
+        padding: 50px 80px;
+    }   
+}

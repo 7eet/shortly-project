@@ -8,6 +8,17 @@ img {
     background-color: #eeeeee;
 }
 
+.featureCards {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+.featureDescription {
+    margin-top: 4rem;
+} 
+
+
 
 .btn-primary {
     width: 100%;
@@ -122,7 +133,7 @@ img {
     background: $darkviolet;
     width: 50px;
     position: absolute;
-    left: 41%;
+    left: 38%;
     margin-top: -50px;
     padding: 15px;
 }
@@ -192,4 +203,78 @@ img {
         left: 44%;
     }
 
+}
+
+@media (min-width: 1200px) {
+    .heroSection {
+        padding: 30px 80px;
+    }
+
+    .formSection {
+        margin-left: 5rem;
+        margin-right: 5rem;
+        width: 80%;
+        padding: 2rem 4rem;
+        background-image: url("../../../assets/images/bg-shorten-desktop.svg");
+    }
+
+    .getStartedSection {
+        background-image: url("../../../assets/images/bg-boost-desktop.svg");
+    }
+
+    .shortenCardsContainer .shortenCard {
+        margin: 3rem 5rem;
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        padding: 28px;
+    }
+
+    .btn-primary {
+        padding: 22px;
+    }
+
+    ::ng-deep .mat-form-field {
+        padding: 20px;
+    }
+
+    .featureCards {
+        padding: 20px 80px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .featureCards .card {
+        margin-right: 40px;
+        position: relative;
+    }
+
+    .featureCards .card:last-child {
+        margin-right: 0px;
+    }
+
+    .card {
+        padding: 2rem;
+        text-align: left;
+    }
+
+    .iconInsideCircle {
+        left: 10%;
+        margin-top: -70px;
+        padding: 15px 24px;
+    }
+
+    .iconInsideCircle img {
+        width: 52px;
+        height: auto;
+    }
+
+    .featureCards .card:nth-child(2) {
+        margin-top: 80px;
+    }
+
+    .featureCards .card:nth-child(3) {
+        margin-top: 110px;
+    }
+
+    
 }
