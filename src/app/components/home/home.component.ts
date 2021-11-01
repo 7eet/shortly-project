@@ -25,13 +25,15 @@ export class HomeComponent implements OnInit {
 
 
   onSubmit(form: FormGroup) {
+    this.submitedForm = true
     if (this.myForm.valid) {
       let url = this.myForm.get('url')?.value;
+      Swal.showLoading();
       this.apiService.getShortenLink(url).subscribe((response)=>{ 
         if (response.ok) {
           this.arrayOfShortenUrls.unshift(response.body);
-          console.log(response.body);
         }
+        Swal.close();
       }, (error) => {
         Swal.fire({
           icon: 'error',
@@ -39,15 +41,16 @@ export class HomeComponent implements OnInit {
           text: error
         })
       });
-    } else {
-      this.submitedForm = true
+      this.submitedForm = false;
     }
-    console.log(this.arrayOfShortenUrls);
+    this.myForm.controls.url.setValue("");
   }
 
-
+  // to copy text  on button click;
   copyShortenLink(result: any) {
     navigator.clipboard.writeText(result.full_short_link2);
+
+    // change text and background color on click
     let btn = document.getElementsByClassName(`${result.code}`)[0];
     btn.textContent = "Copied!"
     btn.classList.add("backgroundVoilet");

@@ -34,6 +34,7 @@ img {
     background-color: $white;
     padding: 10px 10px;
     border-radius: 10px;
+    width: 94%;
 }
 
 ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-wrapper {
@@ -72,11 +73,11 @@ img {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    margin: 1rem;
+    margin: 2rem;
     border-radius: 10px;
     position: absolute;
-    margin-top: -230px;
-    width: 82%;
+    margin-top: -175px;
+    width: 80%;
 }
 
 .shortenCardsContainer {
@@ -85,7 +86,7 @@ img {
 
 
 .shortenCardsContainer .shortenCard {
-    margin: 1rem;
+    margin: 2rem;
     background-color: $white;
     border-radius: 10px;
     padding: 10px;
@@ -191,8 +192,8 @@ img {
     }
 
     .formSection {
-        width: 91%;
         margin-top: -130px;
+        width: 88%;
     }
 
     .features {
@@ -211,10 +212,9 @@ img {
     }
 
     .formSection {
-        margin-left: 5rem;
-        margin-right: 5rem;
-        width: 80%;
-        padding: 2rem 4rem;
+        margin-left: 80px;
+        margin-right: 80px;
+        width: 83%;
         background-image: url("../../../assets/images/bg-shorten-desktop.svg");
     }
 
