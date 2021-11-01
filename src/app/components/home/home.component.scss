@@ -13,7 +13,7 @@ img {
     width: 100%;
     border-radius: 10px;
     padding: 10px;
-    background-color: #56d0cf;
+    background-color: $cyan;
     color: $white;
     font-weight: 700;
     border: none;
@@ -21,8 +21,27 @@ img {
 
 ::ng-deep .mat-form-field {
     background-color: $white;
-    padding: 10px;
+    padding: 10px 10px;
     border-radius: 10px;
+}
+
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+    padding-bottom: 0px;
+}
+
+::ng-deep .mat-form-field-infix {
+    width: 100% !important;
+    padding: 0px;
+    border-top: none;
+}
+
+
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline {
+    display: none;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+    color: $gray;
 }
     
 .getStartedSection {
@@ -47,4 +66,44 @@ img {
     position: absolute;
     margin-top: -72px;
     width: 82%;
+}
+
+.shortenCardsContainer {
+    margin-bottom: 5rem;
+}
+
+
+.shortenCardsContainer .shortenCard {
+    margin: 1rem;
+    background-color: $white;
+    border-radius: 10px;
+    padding: 10px;
+} 
+
+.originalLink {
+    margin: 10px 0px;
+    padding: 0px 10px 10px 10px;
+    border-bottom: 1px solid gray;
+    color: $darkviolet;
+}
+
+.shortenLink {
+    margin: 10px 0px;
+    padding: 0px 10px;
+    color: $cyan;
+}
+
+.btn-copy {
+    margin: 10px 0px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: $cyan;
+    color: $white;
+    font-weight: 700;
+    border: none;
+}
+
+.backgroundVoilet {
+    background-color: $darkviolet;
 }

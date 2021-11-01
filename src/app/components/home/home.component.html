@@ -6,7 +6,7 @@
                 <img src="../../../assets/images/illustration-working.svg">
             </div>
             <div class="text-center marginTop-2">
-                <h1>More than just shorter links</h1>
+                <h1 class="darkBlue">More than just shorter links</h1>
                 <p class="marginTop-1">Build your brand's recognition and get detailed insights on how your links are performing.</p>
                 <button class="btn btn-secondary marginTop-1">Get Started</button>
             </div>
@@ -18,10 +18,12 @@
 <section class="formSection">
     <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
         <div class="marginBottom-1">
-            <mat-form-field >
-                <mat-label>Shorten a link here...</mat-label>
-                <input matInput formControlName="url">
+            <mat-form-field  floatLabel="never" >
+                <input autocomplete="off" matInput formControlName="url" placeholder="Shorten a link here...">
             </mat-form-field>
+            <div *ngIf="submitedForm && myForm.get('url')?.hasError('required')">
+                <i class="danger-text">{{ inputErrorMessage }}</i>
+              </div>
         </div>
 
         <button class="btn btn-primary text-center">Shorten It!</button>
@@ -29,9 +31,18 @@
 </section>
 
 <!-- feature section start -->
-<section class="marginTop-3 paddingTop-12 features">
+<section class="marginTop-3 paddingTop-9 features">
+    <div class="shortenCardsContainer">
+        <div *ngFor="let link of arrayOfShortenUrls">
+            <div class="shortenCard">
+                <p class="originalLink">{{ link.result.original_link }}</p>
+                <p class="shortenLink">{{ link.result.full_short_link2 }}</p>
+                <button class="btn-copy {{ link.result.code }}" (click)="copyShortenLink(link.result)">Copy</button>
+            </div>
+        </div>
+    </div>
     <div class="text-center">
-        <h2>Advanced Statistics</h2>
+        <h2 class="darkBlue">Advanced Statistics</h2>
         <p class="marginTop-1">Track how your links are performing across the web with our advanced statistics dashboard.</p>
     </div>
 
@@ -40,7 +51,7 @@
             <div class="iconInsideCircle">
                 <img src="../../../assets/images/icon-brand-recognition.svg">
             </div>
-            <h3>Brand Recognition</h3>
+            <h3 class="darkBlue">Brand Recognition</h3>
             <p class="marginTop-1">Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instill confidence in your content.</p>
         </div>
 
@@ -48,7 +59,7 @@
             <div class="iconInsideCircle">
                 <img src="../../../assets/images/icon-detailed-records.svg">
             </div>
-            <h3>Detailed Records</h3>
+            <h3 class="darkBlue">Detailed Records</h3>
             <p class="marginTop-1">Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</p>
         </div>
 
@@ -56,7 +67,7 @@
             <div class="iconInsideCircle">
                 <img src="../../../assets/images/icon-fully-customizable.svg">
             </div>
-            <h3>Fully Customizable</h3>
+            <h3 class="darkBlue">Fully Customizable</h3>
             <p class="marginTop-1">Imporve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p>
         </div>
 
