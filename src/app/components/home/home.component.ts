@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   myForm!: FormGroup;
   submitedForm = false;
   inputErrorMessage = "Please add a link"
-  arrayOfShortenUrls: any[] = [];
+  arrayOfShortenUrls: any[] = []
 
   constructor(private apiService: ApiService) { }
 

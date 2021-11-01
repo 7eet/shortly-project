@@ -64,7 +64,7 @@ img {
     margin: 1rem;
     border-radius: 10px;
     position: absolute;
-    margin-top: -72px;
+    margin-top: -230px;
     width: 82%;
 }
 
@@ -108,6 +108,31 @@ img {
     background-color: $darkviolet;
 }
 
+.heroSection {
+    text-align: center; 
+ }
+
+ .features {
+    position: relative;
+}
+
+
+.iconInsideCircle {
+    border-radius: 50%;
+    background: $darkviolet;
+    width: 50px;
+    position: absolute;
+    left: 41%;
+    margin-top: -50px;
+    padding: 15px;
+}
+
+.iconInsideCircle img {
+    width: 38px;
+    height: 38px;
+}
+
+
 
 @media (min-width: 760px) {
 
@@ -115,7 +140,7 @@ img {
         padding: 30px 20px;
     }
 
-    .heroSection  h1, p {
+    .heroSection  {
        text-align: left; 
     }
 
@@ -142,18 +167,29 @@ img {
 
     .originalLink {
         border-bottom: none;
+        padding: 0px;
+    }
+
+    .shortenLink {
+        margin-right: 10px;
     }
 
     .btn-copy {
         margin: 0px;
+        padding: 10px 25px;
     }
 
     .formSection {
         width: 91%;
+        margin-top: -130px;
     }
 
     .features {
         padding-top: 4rem;
+    }
+
+    .iconInsideCircle {
+        left: 44%;
     }
 
 }

@@ -14,7 +14,6 @@ header .menuBtn img {
 header ul li {
     list-style-type: none;
     padding: 0px;
-    margin: 0px 15px;
 }
 
 .rightSideNav, .leftSideNav {
@@ -45,6 +44,10 @@ header ul li {
 
     header {
         padding: 50px 20px;
+    }
+
+    header ul li {
+        margin: 0px 15px;
     }
 
     header li a {
