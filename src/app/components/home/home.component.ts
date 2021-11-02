@@ -25,7 +25,6 @@ export class HomeComponent implements OnInit {
 
 
   onSubmit(form: FormGroup) {
-    this.submitedForm = true
     if (this.myForm.valid) {
       let url = this.myForm.get('url')?.value;
       Swal.showLoading();
@@ -33,17 +32,16 @@ export class HomeComponent implements OnInit {
         if (response.ok) {
           this.arrayOfShortenUrls.unshift(response.body);
         }
-        Swal.close();
+        this.myForm.reset();
+      Swal.close();
       }, (error) => {
         Swal.fire({
           icon: 'error',
-          title: 'Error!!',
+          title: 'Error!',
           text: error
         })
       });
-      this.submitedForm = false;
-    }
-    this.myForm.controls.url.setValue("");
+    } 
   }
 
   // to copy text  on button click;

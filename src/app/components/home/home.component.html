@@ -24,7 +24,7 @@
                     <mat-form-field  floatLabel="never" >
                         <input autocomplete="off" matInput formControlName="url" placeholder="Shorten a link here...">
                     </mat-form-field>
-                    <div *ngIf="submitedForm && myForm.get('url')?.hasError('required')">
+                    <div *ngIf="myForm.get('url')?.hasError('required') && myForm.touched">
                         <i class="danger-text">{{ inputErrorMessage }}</i>
                     </div>
                 </div>

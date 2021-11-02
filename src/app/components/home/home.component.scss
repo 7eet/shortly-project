@@ -33,6 +33,7 @@ img {
 ::ng-deep .mat-form-field {
     background-color: $white;
     padding: 10px 10px;
+    font-size: 12px;
     border-radius: 10px;
     width: 94%;
 }
@@ -220,6 +221,10 @@ img {
 
     .getStartedSection {
         background-image: url("../../../assets/images/bg-boost-desktop.svg");
+    }
+
+    .shortenCardsContainer {
+        margin-top: 5rem;
     }
 
     .shortenCardsContainer .shortenCard {
