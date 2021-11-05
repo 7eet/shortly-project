@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ClipboardService } from 'ngx-clipboard';
 import Swal from 'sweetalert2';
 import { ApiService } from '../../services/api.service';
 
@@ -15,7 +16,7 @@ export class HomeComponent implements OnInit {
   inputErrorMessage = "Please add a link"
   arrayOfShortenUrls: any[] = []
 
-  constructor(private apiService: ApiService) { }
+  constructor(private apiService: ApiService, private clipboardApi: ClipboardService) { }
 
   ngOnInit(): void {
     this.myForm = new FormGroup({
@@ -46,7 +47,7 @@ export class HomeComponent implements OnInit {
 
   // to copy text  on button click;
   copyShortenLink(result: any) {
-    navigator.clipboard.writeText(result.full_short_link2);
+    this.clipboardApi.copyFromContent(result.full_short_link2)
 
     // change text and background color on click
     let btn = document.getElementsByClassName(`${result.code}`)[0];
