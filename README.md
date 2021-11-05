@@ -13,5 +13,5 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   - ### Way 2
     - Clone this repository
     - Run `docker build -t shortly-website .` to build the docker image
-    - Run `docker run -p 4200:4200` to lauch the application and navigate to `http://localhost:4200/`.
+    - Run `docker run -p 4200:4200 shortly-website` to lauch the application and navigate to `http://localhost:4200/`.
 
